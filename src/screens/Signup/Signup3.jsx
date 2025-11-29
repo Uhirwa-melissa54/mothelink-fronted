@@ -48,7 +48,7 @@ export const Signup3 = () => {
 
   const handleProceed = async () => {
     try {
-      const res = await axios.post("https://motherlink-backend-1atz.onrender.com/api/ambulances/create", {
+      const res = await axios.post("http://localhost:8080/api/ambulances/create", {
         dhis2FacilityCode: formData.dhis2Code,
         dispatchLink: formData.ambulanceDispatch,
         numberOfAmbulances: formData.numberOfAmbulances,
@@ -56,7 +56,7 @@ export const Signup3 = () => {
         isAvailable: true, // optional: set default availability
         emergencyPhoneNumber: formData.emergencyPhone,
         organization: {
-          licenseNumber: licenseNumber, // ✅ send as object
+          licenseNumber: licenseNumber, // 
         },
       });
 
