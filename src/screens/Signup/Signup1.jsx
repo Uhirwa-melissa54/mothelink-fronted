@@ -37,7 +37,7 @@ export const Signup1 = () => {
   const handleProceed = async () => {
     try {
       const response = await axios.post(
-        "https://motherlink-backend-1atz.onrender.com/api/organizations/create",
+        "http://localhost:8080/api/organizations/create",
         {
           name: formData.organizationName,
           district: formData.district,
