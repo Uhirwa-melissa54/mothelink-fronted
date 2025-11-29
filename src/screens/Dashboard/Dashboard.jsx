@@ -44,7 +44,7 @@ export const Dashboard = () => {
           "http://localhost:8080/api/admins/mothers/children",
           {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("AuthToken")}`,
+              Authorization: `Bearer ${localStorage.getItem("authToken")}`,
             },
           }
         );
@@ -85,10 +85,10 @@ export const Dashboard = () => {
 
 
   const statsData = [
-    { title: "Total mothers", value: "1,287", change: "+45 this week", icon: UsersIcon },
-    { title: "Active pregnancies", value: "345", change: "+45 this week", icon: TrendingUp },
-    { title: "Total children", value: "456", change: "+45 this week", icon: UsersIcon },
-    { title: "ANC Appointments", value: "89", change: "Next 7 days", icon: BarChart3Icon },
+    { title: "Total mothers", value: totalMother, change: "+45 this week", icon: UsersIcon },
+    { title: "Active pregnancies", value: totalMother, change: "+45 this week", icon: TrendingUp },
+    { title: "Total children", value: totalMother, change: "+45 this week", icon: UsersIcon },
+    { title: "ANC Appointments", value: totalMother, change: "Next 7 days", icon: BarChart3Icon },
   ];
 
   const emergencyChartData = [
