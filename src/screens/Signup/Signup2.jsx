@@ -47,7 +47,7 @@ export const Signup2 = () => {
 
     try {
       const response = await axios.post(
-        "https://motherlink-backend-1atz.onrender.com/api/admins/create",
+        "http://localhost:8080/api/admins/create",
         {
           fullName: formData.fullName,
           email: formData.email,
