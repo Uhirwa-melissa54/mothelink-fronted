@@ -41,7 +41,7 @@ export const Dashboard = () => {
     const fetchTotalMothers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/admins/mothers/children",
+          "http://localhost:8080/mobile/healthworkers/totalMothers",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -86,7 +86,7 @@ export const Dashboard = () => {
 
   const statsData = [
     { title: "Total mothers", value: totalMother, change: "+45 this week", icon: UsersIcon },
-    { title: "Active pregnancies", value: totalMother, change: "+45 this week", icon: TrendingUp },
+    { title: "Active pregnancies", value: totalChildren, change: "+45 this week", icon: TrendingUp },
     { title: "Total children", value: totalMother, change: "+45 this week", icon: UsersIcon },
     { title: "ANC Appointments", value: totalMother, change: "Next 7 days", icon: BarChart3Icon },
   ];
